@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>寵物兔-安心住旅館</title>
+    <link rel="stylesheet" href="../background_grid.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Noto+Sans+SC:wght@700&family=Noto+Sans+TC:wght@200&family=Roboto+Mono:wght@500&family=Zen+Maru+Gothic&display=swap');
+
+        table {
+            width: 100%;
+            height: 30%;
+        }
+
+        td.title {
+            padding: 5px;
+            font-size: 72px;
+            font-weight: 900;
+            text-align: center;
+            /* background-color: yellow; */
+        }
+
+        td>p {
+            padding: 0;
+            margin: 0;
+            font-size: 24px;
+            font-weight: 300;
+            text-align: center;
+            /* background-color: pink; */
+        }
+
+        td.logo1 {
+            width: 25%;
+            background-image: url(../logo1.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        td.logo2 {
+            width: 25%;
+            background-image: url(../logo2.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        /* 表單排版設計 */
+        body,
+        pre,
+        input,
+        textarea {
+            font-size: 30px;
+            font-family: 'Zen Maru Gothic', serif;
+
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        pre {
+            text-align: left;
+            margin: 0;
+        }
+
+        hr.dotted {
+            border-top: 3px dotted #bbb;
+        }
+
+        /* 讓label對齊 */
+        label.getorderData {
+            width: 300px;
+            float: left;
+            text-align: right;
+        }
+
+        #text {
+            text-align: left;
+        }
+
+        #yes,
+        #no,
+        input[type=radio] {
+            cursor: pointer;
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=tel],
+        input[type=date],
+        input[type=number],
+        textarea {
+            width: 60%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            /* margin-top: 6px; */
+            margin-left: 0px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        p.room {
+            margin-top: 0px;
+            margin-bottom: 6px;
+        }
+
+        #roomphoto1,
+        #roomphoto2,
+        #roomphoto3,
+        #roomphoto4 {
+            width: 50%;
+            position: relative;
+            left: 20%;
+            display: none;
+        }
+
+        #room1:hover~#roomphoto1,
+        #room2:hover~#roomphoto2,
+        #room3:hover~#roomphoto3,
+        #room4:hover~#roomphoto4 {
+            display: block;
+            cursor: pointer;
+        }
+
+        textarea {
+            margin: auto;
+            display: block;
+
+        }
+
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 28px;
+            position: relative;
+            left: 30%;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        input[type=reset] {
+            background-color: #d4aa15;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 28px;
+            position: relative;
+            left: 35%;
+        }
+
+        input[type=reset]:hover {
+            background-color: #b59946;
+        }
+
+        /* .orderForm {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        } */
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <div class="item1">
+            <table class="title">
+                <tr>
+                    <td rowspan="3" class="logo1"> </td>
+                    <td class="title">寵物兔-安心住旅館</td>
+                    <td rowspan="3" class="logo2"></td>
+                </tr>
+                <tr>
+
+                    <td>
+                        <p>當您不方便照顧愛兔時，是您安心的好選擇!</p>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <p>本店僅提供寵物兔的住宿服務，謝絕其他寵物。</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="item2">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">首頁</a></li><br><br>
+                    <li><a href="../membership/membership.html"> 註冊會員/會員登入</a></li><br><br>
+                    <li><a href="../goods/goods.html"> 商品介紹</a><br><br></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="item3">
+            <fieldset>
+                <legend>兔寶住宿預約表單_請填寫以下資料</legend>
+                <pre>注意事項:
+                    請以住宿兔寶數量送出訂單，如欲住宿兩隻，請填寫兩張訂單!
+                    寄宿天數計算方式為入住日即算一天，如:1/1入住，1/3退房，為寄宿3日。
+                </pre>
+                <hr class="dotted">
+                <div>
+                    <form name="orderForm" id="text">
+
+                        <label class="getorderData" for="customerName">寄宿兔寶家長姓名:</label>
+                        &nbsp;<input type="text" id="customerName" name="customerName" placeholder="請輸入聯繫人姓名.."
+                            required>
+                        <input type="radio" value="先生" id="sex1" name="sex"><label for="sex1">先生</label>
+                        <input type="radio" value="小姐" id="sex2" name="sex"><label for="sex2">小姐</label><br>
+
+                        <label class="getorderData" for="customerEmail">電子郵件:</label>
+                        &nbsp;<input type="email" id="customerEmail" name="customerEmail"
+                            placeholder="example@example.com" required><br>
+
+                        <label class="getorderData" for="customerPhonenumber">電話號碼:</label>
+                        &nbsp;<input type="tel" id="customerPhonenumber" name="customerPhonenumber"
+                            placeholder="請輸入手機號碼" pattern="[0-9]{4}(\-[0-9]{6})" required><br>
+
+                        <label class="getorderData" for="bunnyName">寄宿兔寶名字:</label>
+                        &nbsp;<input type="text" id="bunnyName" name="bunnyName" placeholder="請輸入兔寶名字" required>
+                        <input type="radio" name="bunnySex" id="Mister"> <label for="Mister">男</label>
+                        <input type="radio" name="bunnySex" id="Miss"> <label for="Miss">女</label><br>
+
+                        <p class="room">
+                            <label class="getorderData" for="suveyLigation">是否結紮:</label>
+                            &nbsp;<input type="radio" id="yes" class="orderDetail" name="suveyLigation"> <label
+                                for="yes">是，已結紮</label>
+                            <input type="radio" id="no" class="orderDetail" name="suveyLigation"> <label
+                                for="no">否，尚未結紮</label><br>
+                        </p>
+
+                        <p class="room">
+                            <label class="getorderData" for="bookingRoom">預定房型: </label>
+                            <input type="radio" id="room_1" class="orderDetail" name="bookingRoom">
+                            <label id="room1" for="room_1">房型1($300/天)</label>
+                            <input type="radio" id="room_2" class="orderDetail" name="bookingRoom">
+                            <label id="room2" for="room_2">房型2($300/天)</label>
+                            <input type="radio" id="room_3" class="orderDetail" name="bookingRoom"> <label id="room3"
+                                for="room_3">房型3($250/天)</label>
+                            <input type="radio" id="room_4" class="orderDetail" name="bookingRoom"> <label id="room4"
+                                for="room_4">房型4($250/天)</label>
+                            <img id="roomphoto1" src="../room1.jpg">
+                            <img id="roomphoto2" src="../room2.jpg">
+                            <img id="roomphoto3" src="../room3.jpg">
+                            <img id="roomphoto4" src="../room4.jpg">
+
+                        </p>
+                        <p class="room">
+                            <label class="getorderData" for="bookingDays">預計入住天數:</label>
+                            &nbsp;<input type="number" id="bookingDays" name="bookingDays" placeholder="住宿3天，請填寫3"
+                                required>&nbsp;&nbsp;<label for="days">天</label><br>
+                        </p>
+
+                        <label class="getorderData" for="bookingDate">預定入住日期:</label>
+                        &nbsp;<input type="date" id="bookingDate" required><br>
+
+                        <label class="getorderData" for="note">需要注意的事項:(選填)</label><br>
+                        <textarea id="note" name="note" placeholder="請填入需要特別交代事項，若無備註事項可跳過"
+                            style="height:200px"></textarea><br>
+
+                        <input id="btn1" type="submit" value="送出訂單" onclick="getorder()">
+                        <input id="btn2" type="reset" value="清除">
+
+                    </form>
+
+
+
+                </div>
+            </fieldset>
+        </div>
+        <!-- 不需要廣告先註解
+        <div class="item4">Right</div> -->
+        <div class="item5">
+            <p>聯繫方式:<a href="mailto:bunny.hotel333@gmail.com">bunny.hotel333@gmail.com</a></p>
+            <a href="mailto:bunny.hotel333@gmail.com"><img src="../mailtome.png" height="150px" width="200px"
+                    href="mailto:bunny.hotel333@gmail.com"></a>
+        </div>
+    </div>
+    <script>
+        Date.prototype.addDays = function (days) {
+            this.setDate(this.getDate() + days);
+            return this;
+        };
+
+        function getorder() {
+            var starDate = new Date(document.getElementById('bookingDate').value);
+            //var endDate = starDate.addDays(document.getElementById('bookingDays').value);
+            var endDate = starDate.addDays(parseInt(document.getElementById('bookingDays').value, 10));
+            var msg = `您已完成${document.getElementById('bookingDate').value} ~ ${endDate.toLocaleDateString()} 的住宿預定!`;
+            alert(msg);
+        }
+
+
+    </script>
+</body>
+
+</html>

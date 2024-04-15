@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../background_grid.css">
+    <style>
+        div.scrollmenu {
+            background-color: #333;
+            overflow: scroll;
+            white-space: nowrap;
+            top: 0px;
+            width: 100%;
+        }
+
+        div.scrollmenu a {
+            display: inline-block;
+            color: red;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+
+        }
+
+        div.scrollmenu a:hover {
+            background-color: #777;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .sticky+.content {
+            padding-top: 60px;
+        }
+
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border-collapse: separate;
+            border: 2px solid black;
+            border-radius: 10px 10px 10px 10px;
+        }
+
+        td.goodsPicture {
+            color: burlywood;
+            width: 500px;
+            height: 200px;
+        }
+
+        td.diagram {
+            color: purple;
+            width: 500px;
+            height: 50px;
+        }
+
+
+    </style>
+</head>
+
+<body style="background-color: lightyellow;">
+    <div class="grid-container">
+        <div class="item1" style="background-color: red;">寵物兔-安心住旅館(商品介紹頁_deBug)</div>
+        <div class="item2">寵物兔-<br>安心住旅館
+            <nav>
+                <ul>
+                    <li><a href="../membership/membership.html"> 註冊會員/會員登入</a><br><br></li>
+                    <li><a href="../roomIntroduction/roomintro.html"> 住宿環境</a><br><br></li>
+                    <li><a href="../goods/goods.html"> 商品介紹</a><br><br></li>
+                    <li><a href="../otherInformation/otherinfor.html">住宿注意事項</a><br><br></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="item3">
+            <div class="scrollmenu" id="subNav">
+                <a href="#title1" href="javascript:void(0)">牧草類.主食區</a>
+                <a href="#title2" href="javascript:void(0)">用品類</a>
+                <a href="#title3" href="javascript:void(0)">保健食品類</a>
+            </div>
+
+
+            <table>
+                <tr>
+                    <th colspan="3" id="title1">牧草類.主食區</th>
+                </tr>
+
+                <tr>
+                    <td class="goodsPicture">
+                        <p>提摩西一割草</p>
+                    </td>
+                    <td class="goodsPicture">
+                        <p>提摩西二割草</p>
+                    </td>
+                    <td class="goodsPicture">
+                        <p>提摩西三割草</p>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="diagram">加入購物車</td>
+                    <td class="diagram">加入購物車</td>
+                    <td class="diagram">加入購物車</td>
+                </tr>
+                <tr>
+                    <td class="goodsPicture">
+                        <p>果園草</p>
+                    </td>
+                    <td class="goodsPicture">
+                        <p>百慕達草</p>
+                    </td>
+                    <td class="goodsPicture">
+                        <p>燕麥草</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="diagram">加入購物車</td>
+                    <td class="diagram">加入購物車</td>
+                    <td class="diagram">加入購物車</td>
+                </tr>
+                <hr> 
+                 <table class="forage_gress">
+
+                    <tr>
+                        <th colspan="3" id="title2">用品類</th>
+                    </tr>
+
+                    <tr>
+                        <td class="goodsPicture">
+                            <p>草架</p>
+                        </td>
+                        <td class="goodsPicture">
+                            <p>喝水器</p>
+                        </td>
+                        <td class="goodsPicture">
+                            <p></p>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td class="diagram">加入購物車</td>
+                        <td class="diagram">加入購物車</td>
+                        <td class="diagram">加入購物車</td>
+                    </tr>
+                    <tr>
+                        <td class="goodsPicture">
+                            <p>便盆</p>
+                        </td>
+                        <td class="goodsPicture">
+                            <p>松木砂</p>
+                        </td>
+                        <td class="goodsPicture">
+                            <p></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="diagram">加入購物車</td>
+                        <td class="diagram">加入購物車</td>
+                        <td class="diagram">加入購物車</td>
+                    </tr>
+                    <hr>
+                    <table class="forage_gress">
+
+                        <tr>
+                            <th colspan="3" id="title3">保健食品類</th>
+                        </tr>
+
+                        <tr>
+                            <td class="goodsPicture">
+                                <p>日本WOOLY鳳梨酵素錠</p>
+                            </td>
+                            <td class="goodsPicture">
+                                <p>WILD SANKO 兔用化毛膏</p>
+                            </td>
+                            <td class="goodsPicture">
+                                <p>WILD SANKO 兔用乳酸菌</p>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="diagram">加入購物車</td>
+                            <td class="diagram">加入購物車</td>
+                            <td class="diagram">加入購物車</td>
+                        </tr>
+                        <tr>
+                            <td class="goodsPicture">
+                                <p></p>
+                            </td>
+                            <td class="goodsPicture">
+                                <p></p>
+                            </td>
+                            <td class="goodsPicture">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="diagram">加入購物車</td>
+                            <td class="diagram">加入購物車</td>
+                            <td class="diagram">加入購物車</td>
+                        </tr>
+                    </table>
+
+
+
+
+        </div>
+        <div class="item5"><span>聯繫方式:<a href="mailto:bunny.hotel333@gmail.com">bunny.hotel333@gmail.com</a></span>
+        </div>
+    </div>
+</body>
+
+</html>

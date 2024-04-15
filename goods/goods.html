@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>寵物兔-安心住旅館</title>
+    <link rel="stylesheet" href="../background_grid.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Noto+Sans+SC:wght@700&family=Noto+Sans+TC:wght@200&family=Roboto+Mono:wght@500&family=Zen+Maru+Gothic&display=swap');
+
+        /* header 設定 */
+
+        table {
+            width: 100%;
+            height: 30%;
+        }
+
+        td.title {
+            padding: 5px;
+            font-size: 72px;
+            font-weight: 900;
+            text-align: center;
+            /* background-color: yellow; */
+        }
+
+        td>p {
+            padding: 0;
+            margin: 0;
+            font-size: 24px;
+            font-weight: 300;
+            text-align: center;
+            /* background-color: pink; */
+        }
+
+        td.logo1 {
+            width: 25%;
+            background-image: url(../logo1.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        td.logo2 {
+            width: 25%;
+            background-image: url(../logo2.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        /*橫向滾輪式menu*/
+        div.scrollmenu {
+            background-color: #B5C1B4;
+            /* overflow: scroll; */
+            white-space: nowrap;
+            top: 0px;
+            width: 100%;
+        }
+
+        div.scrollmenu a {
+            display: inline-block;
+            color: #3F3232;
+            text-align: center;
+            padding: 2px;
+            /* padding: 14px; */
+            text-decoration: none;
+            font-size: 28px;
+
+        }
+
+        div.scrollmenu a:hover {
+            background-color: #74593D;
+            text-shadow: 3px 3px #A7414A;
+            color: #DCD9C6;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+        }
+
+        .sticky+.content {
+            padding-top: 20px;
+        }
+
+
+
+        /* main_table */
+
+        table.forage_gress {
+            border-collapse: separate;
+        }
+
+        th#title1,
+        th#title2,
+        th#title3,
+        td.goodsPicture,
+        td.diagram {
+            border-collapse: separate;
+            border: 2px solid black;
+            border-radius: 10px 10px 10px 10px;
+        }
+
+        th#title1,
+        th#title2,
+        th#title3 {
+            font-size: 40px;
+        }
+
+        td.goodsPicture {
+            width: 500px;
+            height: 200px;
+        }
+
+        p.productName {
+            color: #F1931B;
+            margin: 0;
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        p.price {
+            color: #720017;
+            margin: 0;
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        td.diagram {
+            width: 500px;
+            height: 50px;
+        }
+
+        .btn {
+            cursor: pointer;
+            border-radius: 16px;
+            background-color: lightyellow;
+            font-family: 'Zen Maru Gothic', serif;
+            font-size: 28px;
+            
+        }
+
+        .shoppingCart {
+            border: none;
+            color: dodgerblue
+           
+        }
+
+        .shoppingCart:hover {
+            background: #2196F3;
+            color: white;
+        }
+
+        .buyNow {
+            border: none;
+            color: red
+            
+        }
+
+        .buyNow:hover {
+            background: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+
+<body style="background-color: lightyellow;">
+
+    <div class="grid-container">
+        <div class="item1">
+            <table class="title">
+                <tr>
+                    <td rowspan="3" class="logo1"> </td>
+                    <td class="title">寵物兔-安心住旅館</td>
+                    <td rowspan="3" class="logo2"></td>
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <p>當您不方便照顧愛兔時，是您安心的好選擇!</p>
+                    </td>
+
+                </tr>
+                <tr>
+
+                    <td>
+                        <p>本店僅提供寵物兔的住宿服務，謝絕其他寵物。</p>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+        <div class="item2">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">首頁</a></li><br><br>
+                    <li><a href="../membership/membership.html"> 註冊會員/會員登入</a></li><br><br>
+                    <li><a href="../bookingRoom/bookingRoom.html"> 預約住宿</a></li><br><br>
+
+                </ul>
+            </nav>
+        </div>
+
+        <div class="item3">
+            <div class="scrollmenu" id="subNav">
+                <a href="#title1" href="javascript:void(0)">
+                    <h3>牧草類.主食區</h3>
+                </a>
+                <a href="#title2" href="javascript:void(0)">
+                    <h3>用品類</h3>
+                </a>
+                <a href="#title3" href="javascript:void(0)">
+                    <h3>保健食品類</h3>
+                </a>
+            </div>
+
+            <table class="forage_gress">
+                <tr>
+                    <th colspan="3" id="title1">牧草類.主食區</th>
+                </tr>
+
+                <tr>
+                    <td class="goodsPicture">
+                        <img src="gress.png" width="100">
+                        <p class="productName">提摩西一割草</p>
+                        <p class="price">200元/包</p>
+                    </td>
+                    <td class="goodsPicture">
+                        <img src="gress.png" width="100">
+                        <p class="productName">提摩西二割草</p>
+                        <p class="price">200元/包</p>
+                    </td>
+                    <td class="goodsPicture">
+                        <img src="gress.png" width="100">
+                        <p class="productName">提摩西三割草</p>
+                        <p class="price">200元/包</p>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="diagram">
+                        <button id="gress_shoppingCart01" class="btn shoppingCart">加入購物車</button>&nbsp;&nbsp;&nbsp;
+                        <button id="gress_buyNow01" class="btn buyNow">直接購買</button>
+                    </td>
+                    <td class="diagram">
+                        <button id="gress_shoppingCart02" class="btn shoppingCart">加入購物車</button>&nbsp;&nbsp;&nbsp;
+                        <button id="gress_buyNow02" class="btn buyNow">直接購買</button>
+                    </td>
+                    <td class="diagram">
+                        <button id="gress_shoppingCart03" class="btn shoppingCart">加入購物車</button>&nbsp;&nbsp;&nbsp;
+                        <button id="gress_buyNow03"  class="btn buyNow">直接購買</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="goodsPicture">
+                        <img src="gress.png" width="100">
+                        <p class="productName">果園草</p>
+                        <p class="price">200元/包</p>
+                    </td>
+                    <td class="goodsPicture">
+                        <img src="gress.png" width="100">
+                        <p class="productName">百慕達草</p>
+                        <p class="price">200元/包</p>
+                    </td>
+                    <td class="goodsPicture">
+                        <img src="gress.png" width="100">
+                        <p class="productName">燕麥草</p>
+                        <p class="price">200元/包</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="diagram">
+                        <button id="gress_shoppingCart04" class="btn shoppingCart">加入購物車</button>&nbsp;&nbsp;&nbsp;
+                        <button id="gress_buyNow04"  class="btn buyNow">直接購買</button>
+                    </td>
+                    <td class="diagram">
+                        <button id="gress_shoppingCart05" class="btn shoppingCart">加入購物車</button>&nbsp;&nbsp;&nbsp;
+                        <button id="gress_buyNow05" class="btn buyNow">直接購買</button>
+                    </td>
+                    <td class="diagram">
+                        <button id="gress_shoppingCart06" class="btn shoppingCart">加入購物車</button>&nbsp;&nbsp;&nbsp;
+                        <button id="gress_buyNow06" class="btn buyNow">直接購買</button>
+                    </td>
+                </tr>
+       
+                <tr>
+                    <th colspan="3" id="title2">用品類</th>
+                </tr>
+
+                <tr>
+                    <td class="goodsPicture">
+                        <p class="productName">草架</p>
+                        <p class="price">150元/個</p>
+                    </td>
+                    <td class="goodsPicture">
+                        <p class="productName">喝水器</p>
+                        <p class="price">100元/個</p>
+                    </td>
+                    <td class="goodsPicture">
+                        <img src="preparing.png" width="100">
+                        <p></p>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="diagram">
+                        <button id="goods_shoppingCart01" class="btn shoppingCart">加入購物車</button>&nbsp;&nbsp;&nbsp;
+                        <button id="goods_buyNow01" class="btn buyNow">直接購買</button>
+                    </td>
+                    <td class="diagram">
+                        <button id="goods_shoppingCart02" class="btn shoppingCart">加入購物車</button>&nbsp;&nbsp;&nbsp;
+                        <button id="goods_buyNow02" class="btn buyNow">直接購買</button>
+                    </td>
+                    <td class="diagram">
+                        <button id="goods_shoppingCart03" class="btn shoppingCart">加入購物車</button>&nbsp;&nbsp;&nbsp;
+                        <button id="goods_buyNow03" class="btn buyNow">直接購買</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="goodsPicture">
+                        <img src="toilet.png" width="100">
+                        <p class="productName">便盆</p>
+                        <p class="price">150元/個</p>
+                    </td>
+                    <td class="goodsPicture">
+                        <p class="productName">松木砂</p>
+                        <p class="price">200元/包</p>
+                    </td>
+                    <td class="goodsPicture">
+                        <img src="preparing.png" width="100">
+                        <p></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="diagram">
+                        <button id="goods_shoppingCart04" class="btn shoppingCart">加入購物車</button>&nbsp;&nbsp;&nbsp;
+                        <button id="goods_buyNow04" class="btn buyNow">直接購買</button>
+                    </td>
+                    <td class="diagram">
+                        <button id="goods_shoppingCart05" class="btn shoppingCart">加入購物車</button>&nbsp;&nbsp;&nbsp;
+                        <button id="goods_buyNow05" class="btn buyNow">直接購買</button>
+                    </td>
+                    <td class="diagram">
+                        <button id="goods_shoppingCart06" class="btn shoppingCart">加入購物車</button>&nbsp;&nbsp;&nbsp;
+                        <button id="goods_buyNow06" class="btn buyNow">直接購買</button>
+                    </td>
+                </tr>         
+
+                <tr>
+                    <th colspan="3" id="title3">保健食品類</th>
+                </tr>
+
+                <tr>
+                    <td class="goodsPicture">
+                        <p class="productName">日本WOOLY鳳梨酵素錠</p>
+                        <p class="price">300元/條</p>
+                    </td>
+                    <td class="goodsPicture">
+
+                        <p class="productName">WILD SANKO</p>
+                        <p class="productName">兔用化毛膏</p>
+
+                        <p class="price">300元/條</p>
+                    </td>
+                    <td class="goodsPicture">
+
+                        <p class="productName">WILD SANKO</p>
+                        <p class="productName">兔用乳酸菌</p>
+
+                        <p class="price">300元/條</p>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="diagram">
+                        <button id="supplementFood_shoppingCart01" class="btn shoppingCart">加入購物車</button>&nbsp;&nbsp;&nbsp;
+                        <button id="supplementFood_buyNow01" class="btn buyNow">直接購買</button>
+                    </td>
+                    <td class="diagram">
+                        <button id="supplementFood_shoppingCart02" class="btn shoppingCart">加入購物車</button>&nbsp;&nbsp;&nbsp;
+                        <button id="supplementFood_buyNow02" class="btn buyNow">直接購買</button>
+                    </td>
+                    <td class="diagram">
+                        <button id="supplementFood_shoppingCart03" class="btn shoppingCart">加入購物車</button>&nbsp;&nbsp;&nbsp;
+                        <button id="supplementFood_buyNow03" class="btn buyNow">直接購買</button>
+                    </td>
+                </tr>             
+            </table>
+        </div>
+        
+
+        <!-- 不需要廣告先註解
+        <div class="item4">Right</div> -->
+        <div class="item5">
+            <p>聯繫方式:<a href="mailto:bunny.hotel333@gmail.com">bunny.hotel333@gmail.com</a></p>
+            <a href="mailto:bunny.hotel333@gmail.com"><img src="../mailtome.png" height="150px" width="200px"
+                    href="mailto:bunny.hotel333@gmail.com"></a>
+        </div>
+    </div>
+
+
+    <script>
+        // 設定 subNav 使其滾動內容時能被固定在最上方
+        window.onscroll = function () { myFunction() };
+        var subNav = document.getElementById("subNav");
+        var sticky = subNav.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                subNav.classList.add("sticky")
+            } else {
+                subNav.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+
+</html>

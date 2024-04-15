@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>寵物兔-安心住旅館</title>
+    <link rel="stylesheet" href="../background_grid.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Noto+Sans+SC:wght@700&family=Noto+Sans+TC:wght@200&family=Roboto+Mono:wght@500&family=Zen+Maru+Gothic&display=swap');
+
+        table {
+            width: 100%;
+            height: 30%;
+        }
+
+        td.title {
+            padding: 5px;
+            font-size: 72px;
+            font-weight: 900;
+            text-align: center;
+            /* background-color: yellow; */
+        }
+
+        td>p {
+            padding: 0;
+            margin: 0;
+            font-size: 24px;
+            font-weight: 300;
+            text-align: center;
+            /* background-color: pink; */
+        }
+
+        td.logo1 {
+            width: 25%;
+            background-image: url(../logo1.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        td.logo2 {
+            width: 25%;
+            background-image: url(../logo2.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+
+        div.item3 {
+            font-size: 45px;
+            /* font-family: 'Zen Maru Gothic', serif; */
+        }
+
+        input[type=tel],
+        input[type=password] {
+            width: 60%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            /* margin-top: 6px; */
+            margin-left: 0px;
+            margin-bottom: 16px;
+            resize: vertical;
+            font-size: 30px;
+            font-family: 'Zen Maru Gothic', serif;
+        }
+
+        input[type=submit] {
+            font-size: 30px;
+            font-family: 'Zen Maru Gothic', serif;
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body style="background-color: lightyellow;">
+
+    <div class="grid-container">
+        <div class="item1">
+            <table class="title">
+                <tr>
+                    <td rowspan="3" class="logo1"> </td>
+                    <td class="title">寵物兔-安心住旅館</td>
+                    <td rowspan="3" class="logo2"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>當您不方便照顧愛兔時，是您安心的好選擇!</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>本店僅提供寵物兔的住宿服務，謝絕其他寵物。</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="item2">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">首頁</a></li><br><br>
+                    <li><a href="../bookingRoom/bookingRoom.html"> 預約住宿</a></li><br><br>
+                    <li><a href="../goods/goods.html"> 商品介紹</a><br><br></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="item3">
+            <form name="membershipData">
+                <legend>會員登入</legend>
+                <label for="count">帳號:</label>
+                <input type="tel" pattern="[0-9]{4}\-[0-9]{6}" placeholder="請輸入您的電話號碼" required><br>
+                <label for="passWord">密碼:</label>
+                <input type="password" placeholder="密碼" required><br>
+                <input onclick="location.href='/';" id="login" type="submit" value="登入">
+            </form>
+        </div>
+        <!-- 不需要廣告先註解
+        <div class="item4">Right</div> -->
+        <div class="item5">
+            <p>聯繫方式:<a href="mailto:bunny.hotel333@gmail.com">bunny.hotel333@gmail.com</a></p>
+            <a href="mailto:bunny.hotel333@gmail.com"><img src="../mailtome.png" height="150px" width="200px"
+                    href="mailto:bunny.hotel333@gmail.com"></a>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

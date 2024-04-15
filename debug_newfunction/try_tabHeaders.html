@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../background_grid.css">
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .tablink {
+            background-color: #555;
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 25%;
+        }
+
+        .tablink:hover {
+            background-color: #777;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            color: white;
+            display: none;
+            padding: 50px;
+            text-align: center;
+        }
+
+        #room1 {
+            background-image: url(1.png);
+            background-color: wheat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        #room2 {
+            background-image: url(2.png);
+            background-color: wheat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        #room3 {
+            background-image: url(3.png);
+            background-color: wheat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        #room4 {
+            background-image: url(4.png);
+            background-color: wheat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        
+    </style>
+</head>
+
+<body style="background-color: lightyellow;">
+
+    <div class="grid-container">
+        <div class="item1">寵物兔-安心住旅館(住宿介紹頁)</div>
+        <div class="item2">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">首頁</a></li><br><br>
+                    <li><a href="../membership/membership.html"> 註冊會員/會員登入</a></li><br><br>
+                    <li><a href="roomintro.html"> 住宿環境</a></li><br><br>
+                    <li><a href="../goods/goods.html"> 商品介紹</a><br><br></li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <div class="item3">
+
+            <p>住宿房型介紹</p>
+
+            <div id="room1" class="tabcontent">
+                <h1>豪華大套房</h1>
+                
+            </div>
+
+            <div id="room2" class="tabcontent">
+                <h1>粉紅公主房</h1>
+                
+            </div>
+
+            <div id="room3" class="tabcontent">
+                <h1>個人小房1</h1>
+                
+            </div>
+
+            <div id="room4" class="tabcontent">
+                <h1>個人小房2</h1>
+               
+            </div>
+
+            <button class="tablink" onclick="roomSelect('room1', this, 'red')" id="defaultOpen">豪華大套房</button>
+            <button class="tablink" onclick="roomSelect('room2', this, 'pink')">粉紅公主房</button>
+            <button class="tablink" onclick="roomSelect('room3', this, 'lightblue')">個人小房1</button>
+            <button class="tablink" onclick="roomSelect('room4', this, 'orange')">個人小房2</button>
+
+
+            <br><br>
+            <hr>
+
+
+
+            <p>內容</p>
+            <p>內容</p>
+            <p>內容</p>
+            <p>內容</p>
+            <p>內容</p>
+
+
+
+        </div>
+        <!-- 不需要廣告先註解
+        <div class="item4">Right</div> -->
+        <div class="item5"> <span>聯繫方式:<a href="mailto:bunny.hotel333@gmail.com">bunny.hotel333@gmail.com</a></span>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        function roomSelect(roomName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(roomName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+
+
+    </script>
+</body>
+
+</html>

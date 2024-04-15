@@ -1,0 +1,60 @@
+body {
+    background-color: lightyellow;
+    font-family: 'Zen Maru Gothic', serif;
+}
+
+.item1 {
+    grid-area: header;
+    margin-inline-start: 0 px;
+    margin-inline-end: 0 px;
+}
+
+.item2 {
+    grid-area: menu;
+    font-size: 40px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.item3 {
+    grid-area: main;
+}
+
+/* 不需要廣告先註解
+        .item4 {
+            grid-area: right;
+        } */
+
+.item5 {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.grid-container {
+    background-image: url(./background_T.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-areas:
+        'header header header header header header'
+        'menu main main main main main'
+        'menu footer footer footer footer footer';
+    gap: 1px;
+
+    border: dashed;
+    border-radius: 10px;
+    padding: 1px;
+    height: 100%;
+    grid-template-columns: 25% 74%;
+}
+
+.grid-container>div {
+    text-align: center;
+    padding: 20px 0;
+    /* font-size: 30px; */
+}
